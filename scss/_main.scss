@@ -1,0 +1,242 @@
+.start {
+	display: inline-block;
+	border: 1px solid $colorwhiteFF;
+	border-radius: 16px;
+	padding: 20px 40px;
+	font-size: 20px;
+	font-weight: $fontweight900;
+	line-height: $lineheight12;
+}
+.main-box {
+	display: flex;
+	justify-content: end;
+	margin-top: 100px;
+	position: relative;
+	overflow: hidden;
+    .box1 {
+        animation:move 4.5s 0.4s infinite;
+    }
+    .box2 {
+        animation:move 4.5s 0.2s infinite;
+    }
+    .box3 {
+        animation:move 4.5s infinite;
+    }
+}
+.main {
+    .main-text {
+        display: flex;
+        justify-content: end;
+        margin-bottom: 238px;
+        p {
+            width: 636px;
+            font-size: 48px;
+        }
+    }
+} 
+
+@keyframes move{
+    0% {
+		transform: translate(0px, 180px); 
+    }
+	30% {
+		transform: translate(0px, 0px); 
+	}
+	55% {
+		transform: translate(0px, 0px); 
+	}
+    100% {
+		transform: translate(0px, -300px);
+    }
+}
+@media (max-width: 767px) {
+	.main-box {
+		margin-top: 180px;
+		margin-bottom: 120px;
+		justify-content: center;
+        img {
+            width: 33%;
+        }
+	}
+}
+.lgblack_left {
+	background: linear-gradient(90deg, black 50%, transparent 50%);
+}
+.direction {
+	margin-bottom: 80px;
+	display: flex;
+	gap: 24px;
+    &-title {
+        min-width: 414px;
+        white-space: nowrap;
+        padding-right: 80px;
+    }
+    &-content p {
+        font-weight: $fontweight900;
+        font-size: 48px;
+        line-height: $lineheight12;
+    }
+}
+@media (max-width: 1023px) {
+	.direction-title {
+		min-width: 20%;
+	}
+}
+@media (max-width: 767px) {
+	.direction {
+		flex-direction: column;
+		margin-bottom: 48px;
+        .direction-title {
+            flex-basis: 0;
+            font-size: 20px;
+            margin-bottom: 24px;
+        }
+        &-content {
+            flex-basis: 0;
+        }
+        &-content p {
+            font-size: 32px;
+            margin-bottom: 48px;
+        } 
+	}
+}
+.servicelist {
+	display: flex;
+	justify-content: space-between;
+    li {
+        box-sizing: border-box;
+        width: 32%;
+        padding: 80px 40px;
+        border: 1px solid #525252;
+        border-radius: 16px;
+        span {
+            margin-bottom: 25px;
+        }
+        h4 {
+            margin-bottom: 20px;
+        }
+        p {
+            font-weight: $fontweight400;
+            color: #F2F2F2;
+        }
+    }
+    .material-symbols-outlined {
+        font-size: 80px;
+    }
+}
+.servicelist li {
+	box-sizing: border-box;
+	width: 32%;
+	padding: 80px 40px;
+	border: 1px solid #525252;
+    border-radius: 16px;
+}
+
+@media (max-width: 1023px) {
+	.servicelist li {
+		padding: 40px;
+	}
+}
+@media (max-width: 767px) {
+	.servicelist {
+		flex-direction: column;
+        li {
+            width: 98%;
+            margin: 0px auto 24px;
+            p {
+                font-weight: $fontweight400;
+            }
+        }
+	}
+}
+
+.enterprise {
+	display: flex;
+	overflow: hidden;
+	gap: 20px;
+	justify-content: center;
+	position: relative;
+    &-group {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    img {
+        max-width: 160px;
+    }
+}
+.dark-gradient {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background-image: linear-gradient(to right, #000 1%, rgba(0, 0, 0, 0) 20% 90%, #000 99%);
+}
+.partner {
+	display: flex;
+	justify-content: space-between;
+    .fivestar {
+        margin: 22px 0;
+    }
+    li{
+        box-sizing: border-box;
+        width: 32%;
+        padding: 40px;
+        background: rgba(255, 255, 255, 0.08);
+        border-radius: 16px;
+        display: flex;
+        flex-direction: column;
+    }
+    p {
+        min-height: 215px;
+        color: $colorwhiteF2;
+        text-align: justify;
+        flex-grow: 1;
+    }
+}
+
+.profile {
+	display: flex;
+	margin-top: 20px;
+}
+.namecompany {
+	margin-left: 16px;
+    .namecompany-name {
+        font-weight: $fontweight700;
+        margin-bottom: 4px;
+    }
+    .namecompany-company {
+        font-size: 14px;
+    }
+}
+.switch {
+	display: none;
+}
+@media (max-width: 767px) {
+	.partner {
+		flex-wrap: wrap;
+        li {
+            width: 100%;
+            padding: 20px;
+        }
+        p {
+            min-height: 0;
+            font-weight: $fontweight400;
+        }
+        .hide {
+            display: none;
+        } 
+	}
+	.switch {
+		margin-top: 24px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+        .material-symbols-outlined{
+            font-size: 12px;
+        }
+        .small {
+            color: #525252;
+        }
+	}
+}

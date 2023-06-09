@@ -1,0 +1,46 @@
+.header {
+	max-width: 1296px;
+	padding: 0px 312px;
+    .logolink {
+        padding: 20px 0px;
+        border-bottom: 1px solid #FFFFFF;
+        align-items: center;
+        a {
+            font-weight: 700;
+        }
+        ul {
+            gap: 20px;
+        }
+    }
+
+}
+.logo {
+	background-image:url(https://raw.githubusercontent.com/paytonwu90/AI-Tool-King/master/image/logo.png);
+	background-size: auto 100%;
+	max-width: 250px;
+	max-height: 40px;
+	text-indent: 101%;
+	overflow: hidden;
+	white-space: nowrap;
+	float:left;
+}
+@media (max-width: 1320px) {
+	.wrap {
+		padding: 0;
+	}
+	.padding312 {
+		padding: 0px 12px;
+	}
+	.header {
+		padding: 0px 12px;
+	}
+}
+@media (max-width: 767px){
+	.header .logolink {
+		padding: 28px 0px;
+	}
+	.header .logo {
+		max-width: 146px;
+		max-height: 24px;
+	}
+}
